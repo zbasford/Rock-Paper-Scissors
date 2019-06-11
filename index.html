@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+    <header>
+        <h1> Rock Paper Scissors Game</h1>
+    </header>
+   
+    <div id="nameWelcome">
+      
+    <form name ="nameForm"  >
+        <label for= "UserInput">
+            Enter Your Name:
+            <input type="text" value="" id="UserName" onkeyup = "if(this.value.length > 0) document.getElementById('nameButton').disabled = false; else document.getElementById('nameButton').disabled = true;" Placeholder ="Please Enter your Name." />
+            
+        </label>
+        
+        <p id = "result"></p>
+        <input type="submit" value="Enter" id="nameButton" disabled  />
+    </form>
+        </div>
+        <div class="rpsscore" >
+            Win - <span id="rpsWin">0</span> |
+            Lose - <span id="rpsLose">0</span> |
+            Draw - <span id="rpsDraw">0</span>
+          </div>
+    <div id="rpsGameForm" class="hidden"  >
+        
+        <form >
+           <label for="UserSelection">
+               Your Selection:
+           </label>
+            
+                <input type = "submit" value ="Rock" id ="r" />
+                <input type = "submit" value ="Paper" id ="p" />
+                <input type = "submit" value ="Scissors" id ="s" />
+                <p id ="action">Make Your Move!</p>  
+           
+            
+        </form>
+        <div class = "result">
+              <p></p>  
+            </div>
+        <button   id = "resetGame"> Reset Game</button>
+        
+    </div>
+  
+
+    <script src="index.js"></script>
+</body>
+</html>
